@@ -9,16 +9,18 @@
 /* Begin PBXBuildFile section */
 		48249F322082201A00E59A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48249F312082201A00E59A1B /* AppDelegate.swift */; };
 		48249F342082201B00E59A1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48249F332082201B00E59A1B /* Assets.xcassets */; };
-		48249F372082201B00E59A1B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48249F352082201B00E59A1B /* MainMenu.xib */; };
+		48249F412082206800E59A1B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 48249F402082206700E59A1B /* MainMenu.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48249F2E2082201A00E59A1B /* Diorama.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diorama.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48249F312082201A00E59A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48249F332082201B00E59A1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		48249F362082201B00E59A1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		48249F382082201B00E59A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		48249F392082201B00E59A1B /* Diorama.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Diorama.entitlements; sourceTree = "<group>"; };
+		48249F3F2082206100E59A1B /* CAPluginLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CAPluginLayer.h; sourceTree = "<group>"; };
+		48249F402082206700E59A1B /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
+		48249F422082219100E59A1B /* preview.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = preview.png; sourceTree = "<group>"; };
+		48249F432082219E00E59A1B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,8 @@
 		48249F252082201A00E59A1B = {
 			isa = PBXGroup;
 			children = (
+				48249F422082219100E59A1B /* preview.png */,
+				48249F432082219E00E59A1B /* README.md */,
 				48249F302082201A00E59A1B /* Diorama */,
 				48249F2F2082201A00E59A1B /* Products */,
 			);
@@ -51,11 +55,11 @@
 		48249F302082201A00E59A1B /* Diorama */ = {
 			isa = PBXGroup;
 			children = (
+				48249F3F2082206100E59A1B /* CAPluginLayer.h */,
 				48249F312082201A00E59A1B /* AppDelegate.swift */,
+				48249F402082206700E59A1B /* MainMenu.xib */,
 				48249F332082201B00E59A1B /* Assets.xcassets */,
-				48249F352082201B00E59A1B /* MainMenu.xib */,
 				48249F382082201B00E59A1B /* Info.plist */,
-				48249F392082201B00E59A1B /* Diorama.entitlements */,
 			);
 			path = Diorama;
 			sourceTree = "<group>";
@@ -119,7 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48249F342082201B00E59A1B /* Assets.xcassets in Resources */,
-				48249F372082201B00E59A1B /* MainMenu.xib in Resources */,
+				48249F412082206800E59A1B /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -135,17 +139,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		48249F352082201B00E59A1B /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				48249F362082201B00E59A1B /* Base */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		48249F3A2082201B00E59A1B /* Debug */ = {
@@ -265,7 +258,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Diorama/Diorama.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2754ZHC8VE;
@@ -276,6 +269,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.avaidyam.Diorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Diorama/CAPluginLayer.h;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -284,7 +278,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Diorama/Diorama.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 2754ZHC8VE;
@@ -295,6 +289,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.avaidyam.Diorama;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Diorama/CAPluginLayer.h;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
